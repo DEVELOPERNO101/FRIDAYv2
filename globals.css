@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #0e1111;      /* background */
+  --slate: #708090;    /* muted text / borders */
+  --gold: #ffd166;     /* primary accent */
+  --mint: #baf2e9;     /* secondary accent */
+  --paper: #fffcf9;    /* bright text */
+  --panel: #16191a;
+  --line: #262b2c;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Inter', sans-serif;
+}
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+a { color: inherit; }
+
+.center-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  text-align: center;
+}
+
+.logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.brand-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  color: var(--paper);
+}
+
+.brand-title span {
+  color: var(--gold);
+}
+
+.tagline {
+  color: var(--slate);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  max-width: 360px;
+}
+
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--paper);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--mint);
+  border-color: var(--mint);
+  color: var(--ink);
+}
+
+.dashboard {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.dash-header .who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-header .who img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+
+.card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.integration-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.integration-row:last-child { border-bottom: none; }
+
+.integration-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.integration-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.status-connected {
+  background: rgba(186, 242, 233, 0.12);
+  color: var(--mint);
+  border: 1px solid rgba(186, 242, 233, 0.35);
+}
+
+.status-pending {
+  background: rgba(112, 128, 144, 0.12);
+  color: var(--slate);
+  border: 1px solid var(--line);
+}
+
+.status-error {
+  background: rgba(255, 138, 138, 0.12);
+  color: #ff8a8a;
+  border: 1px solid rgba(255, 138, 138, 0.35);
+}
+
+.live-detail {
+  padding: 0 0 12px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.live-detail-error {
+  font-size: 12px;
+  color: #ff8a8a;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.live-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.live-item-title {
+  font-size: 13px;
+  color: var(--offwhite);
+  text-decoration: none;
+}
+
+.live-item-title.unread {
+  font-weight: 700;
+  color: var(--mint);
+}
+
+.live-item-sub {
+  font-size: 11px;
+  color: var(--slate);
+}
